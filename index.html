@@ -1,20 +1,128 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="google-site-verification"
             content="6BZTRqcdqKLNwlSNQxc8qqbARBH8_K2UGhtc0GlQafA"
         />
         <meta name="yandex-verification" content="2a711684acd89967" />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Malumian - Minimalist Apps and Digital Tools</title>
         <meta
             name="description"
-            content="Malumian is an ecosystem of minimalist applications designed to make everyday digital tools simpler, calmer, and more human."
+            content="Explore Malumian, a minimalist application ecosystem by Arthur Malumian for personal websites, finance tools, and calmer everyday digital products."
+        />
+        <meta name="author" content="Arthur Malumian" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.malumian.dev/" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Malumian - Minimalist Apps and Digital Tools"
+        />
+        <meta
+            property="og:description"
+            content="Explore Malumian, a minimalist application ecosystem by Arthur Malumian for personal websites, finance tools, and calmer everyday digital products."
+        />
+        <meta property="og:url" content="https://www.malumian.dev/" />
+        <meta property="og:site_name" content="Malumian" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.malumian.dev/icon.svg" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:image:alt" content="Malumian logo" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+            name="twitter:title"
+            content="Malumian - Minimalist Apps and Digital Tools"
+        />
+        <meta
+            name="twitter:description"
+            content="Explore Malumian, a minimalist application ecosystem by Arthur Malumian for personal websites, finance tools, and calmer everyday digital products."
+        />
+        <meta
+            name="twitter:image"
+            content="https://www.malumian.dev/icon.svg"
+        />
+        <meta name="twitter:image:alt" content="Malumian logo" />
+        <meta
+            name="theme-color"
+            content="#f3f3f3"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="#1c1c1c"
+            media="(prefers-color-scheme: dark)"
         />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="style.css" />
-        <title>Malumian</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Organization",
+                        "@id": "https://www.malumian.dev/#organization",
+                        "name": "Malumian",
+                        "url": "https://www.malumian.dev/",
+                        "logo": "https://www.malumian.dev/icon.svg",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Arthur Malumian",
+                            "url": "https://arthur.malumian.dev/"
+                        }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://www.malumian.dev/#website",
+                        "url": "https://www.malumian.dev/",
+                        "name": "Malumian",
+                        "description": "A minimalist application ecosystem by Arthur Malumian for personal websites, finance tools, and calmer everyday digital products.",
+                        "publisher": {
+                            "@id": "https://www.malumian.dev/#organization"
+                        },
+                        "inLanguage": "en"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://www.malumian.dev/#webpage",
+                        "url": "https://www.malumian.dev/",
+                        "name": "Malumian - Minimalist Apps and Digital Tools",
+                        "isPartOf": {
+                            "@id": "https://www.malumian.dev/#website"
+                        },
+                        "about": {
+                            "@id": "https://www.malumian.dev/#organization"
+                        },
+                        "mainEntity": {
+                            "@id": "https://www.malumian.dev/#projects"
+                        },
+                        "inLanguage": "en"
+                    },
+                    {
+                        "@type": "ItemList",
+                        "@id": "https://www.malumian.dev/#projects",
+                        "name": "Malumian projects",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Arthur Malumian",
+                                "url": "https://arthur.malumian.dev/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Finance Malumian",
+                                "url": "https://finance.malumian.dev/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        </script>
     </head>
     <body>
         <div class="page">
@@ -28,7 +136,10 @@
             </header>
 
             <main>
-                <section class="projects" aria-label="Projects">
+                <section class="projects" aria-labelledby="projects-title">
+                    <h2 id="projects-title" class="visually-hidden">
+                        Malumian projects
+                    </h2>
                     <div class="project-grid">
                         <article class="project-card">
                             <div class="project-card__meta">
@@ -45,9 +156,9 @@
                                 class="project-card__link"
                                 href="https://arthur.malumian.dev"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
-                                Open project
+                                Open
                             </a>
                         </article>
 
@@ -66,9 +177,9 @@
                                 class="project-card__link"
                                 href="https://finance.malumian.dev"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
-                                Open project
+                                Open
                             </a>
                         </article>
                     </div>
@@ -82,7 +193,7 @@
                     <a
                         href="https://github.com/malumian/www/blob/main/LICENSE"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                     >
                         Arthur Malumian
                     </a>
