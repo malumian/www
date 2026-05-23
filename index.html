@@ -3,22 +3,87 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Malumian is an ecosystem of minimalist applications designed to make everyday digital tools simpler, calmer, and more human."
+        />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <title>Malumian Portal</title>
+        <link rel="stylesheet" href="style.css" />
+        <title>Malumian</title>
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <h1>Malumian Portal</h1>
-        <ul>
-            <li>
-                <a href="https://arthur.malumian.dev" target="_blank"
-                    >Arthur Malumian</a
-                >
-            </li>
-            <li>
-                <a href="https://finance.malumian.dev" target="_blank"
-                    >Malumian Finance</a
-                >
-            </li>
-        </ul>
+        <div class="page">
+            <header class="hero" aria-labelledby="page-title">
+                <p class="eyebrow">Malumian ecosystem</p>
+                <h1 id="page-title">Malumian</h1>
+                <p class="hero__text">
+                    An ecosystem of minimalist applications designed to make
+                    everyday digital tools simpler, calmer, and more human.
+                </p>
+            </header>
+
+            <main>
+                <section class="projects" aria-label="Projects">
+                    <div class="project-grid">
+                        <article class="project-card">
+                            <div class="project-card__meta">
+                                <span>01</span>
+                                <span>Personal</span>
+                            </div>
+                            <h3>Arthur Malumian</h3>
+                            <p>
+                                The project author's blog and personal website:
+                                notes on web development, workflow, setup, and
+                                the ideas behind the Malumian ecosystem.
+                            </p>
+                            <a
+                                class="project-card__link"
+                                href="https://arthur.malumian.dev"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Open project
+                            </a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-card__meta">
+                                <span>02</span>
+                                <span>In development</span>
+                            </div>
+                            <h3>Finance Malumian</h3>
+                            <p>
+                                An expense tracking app currently in
+                                development, built to make personal spending
+                                easier to understand and manage.
+                            </p>
+                            <a
+                                class="project-card__link"
+                                href="https://finance.malumian.dev"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Open project
+                            </a>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <span>Malumian</span>
+                <span>
+                    &copy;
+                    <a
+                        href="https://github.com/malumian/www/blob/main/LICENSE"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Arthur Malumian
+                    </a>
+                </span>
+            </footer>
+        </div>
     </body>
 </html>

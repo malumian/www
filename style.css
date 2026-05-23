@@ -1,0 +1,248 @@
+:root {
+    color-scheme: light dark;
+    --background: #f3f3f3;
+    --foreground: #000000;
+    --surface: #ffffff;
+    --surface-foreground: #000000;
+    --surface-border: #000000;
+
+    --page-max-width: 40rem;
+    --page-gutter: 0.5rem;
+    --page-block-padding: 0.5rem;
+    --section-gap: 0.625rem;
+
+    --hero-align: start;
+    --hero-min-height: auto;
+    --hero-padding: 2.5rem 1.25rem 1.75rem;
+    --hero-title-size: 3rem;
+    --hero-title-line-height: 0.95;
+    --hero-text-size: 1rem;
+
+    --project-grid-columns: 1fr;
+    --project-grid-gap: var(--section-gap);
+    --card-padding: 1.25rem;
+    --card-min-height: 20rem;
+    --card-rule-space: 1.5rem;
+    --card-title-size: 2rem;
+    --card-title-margin: 2rem 0 1rem;
+
+    --footer-direction: column;
+    --footer-margin-top: 0.625rem;
+    --footer-padding: 1.125rem 0 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1c1c1c;
+        --foreground: #ffffff;
+        --surface: #000000;
+        --surface-foreground: #ffffff;
+        --surface-border: #ffffff;
+    }
+}
+
+@media (min-width: 48em) {
+    :root {
+        --page-max-width: 50rem;
+        --page-gutter: 1rem;
+        --page-block-padding: 1.25rem;
+        --section-gap: 1.25rem;
+
+        --hero-align: end;
+        --hero-min-height: 22.5rem;
+        --hero-padding: 3rem 2.5rem 2.25rem;
+        --hero-title-size: 4.5rem;
+        --hero-title-line-height: 0.92;
+        --hero-text-size: 1.0625rem;
+
+        --project-grid-columns: repeat(2, minmax(0, 1fr));
+        --project-grid-gap: 1.25rem;
+        --card-padding: 1.5rem;
+        --card-min-height: 22.5rem;
+        --card-rule-space: 1.5rem;
+        --card-title-size: 2.5rem;
+        --card-title-margin: 2.25rem 0 1.125rem;
+
+        --footer-direction: row;
+        --footer-margin-top: 1.25rem;
+        --footer-padding: 1.125rem 0;
+    }
+}
+
+@media (min-width: 72em) {
+    :root {
+        --section-gap: 1.5rem;
+
+        --hero-min-height: 24rem;
+        --hero-padding: 3.5rem;
+        --hero-title-size: 5.5rem;
+        --hero-text-size: 1.125rem;
+
+        --project-grid-gap: 1.5rem;
+        --card-padding: 1.75rem;
+        --card-min-height: 24rem;
+        --card-rule-space: 1.75rem;
+        --card-title-size: 3rem;
+        --card-title-margin: 2.25rem 0 1.125rem;
+
+        --footer-margin-top: 1.5rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--foreground);
+    background: var(--background);
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: min(var(--page-max-width), calc(100% - (var(--page-gutter) * 2)));
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: var(--page-block-padding) 0;
+}
+
+.hero {
+    display: grid;
+    min-height: var(--hero-min-height);
+    align-content: var(--hero-align);
+    padding: var(--hero-padding);
+    border: 1px solid var(--surface-border);
+    color: var(--surface-foreground);
+    background: var(--surface);
+}
+
+.eyebrow {
+    margin: 0 0 1.125rem;
+    color: var(--foreground);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow {
+    color: var(--surface-foreground);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    max-width: 47.5rem;
+    margin-bottom: 1.125rem;
+    font-size: var(--hero-title-size);
+    line-height: var(--hero-title-line-height);
+}
+
+.hero__text {
+    max-width: 40rem;
+    margin-bottom: 0;
+    color: var(--surface-foreground);
+    font-size: var(--hero-text-size);
+    line-height: 1.55;
+}
+
+.projects {
+    margin-top: var(--section-gap);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: var(--project-grid-columns);
+    gap: var(--project-grid-gap);
+}
+
+.project-card {
+    display: flex;
+    min-height: var(--card-min-height);
+    flex-direction: column;
+    padding: var(--card-padding);
+    border: 1px solid var(--surface-border);
+    color: var(--surface-foreground);
+    background: var(--surface);
+}
+
+.project-card__meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: var(--card-rule-space);
+    border-bottom: 1px solid var(--surface-border);
+    color: var(--surface-foreground);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    margin: var(--card-title-margin);
+    font-size: var(--card-title-size);
+    line-height: 0.95;
+}
+
+.project-card p {
+    margin-bottom: 2rem;
+    color: var(--surface-foreground);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.project-card__link {
+    display: inline-flex;
+    width: fit-content;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--surface-border);
+    text-decoration: none;
+    transition:
+        background 160ms ease,
+        color 160ms ease;
+}
+
+.project-card__link:hover,
+.project-card__link:focus-visible {
+    color: var(--surface);
+    background: var(--surface-foreground);
+}
+
+.project-card__link:focus-visible {
+    outline: 2px solid var(--surface-foreground);
+    outline-offset: 4px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: var(--footer-direction);
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: var(--footer-margin-top);
+    padding: var(--footer-padding);
+    border-top: 1px solid var(--foreground);
+    color: var(--foreground);
+    font-size: 0.875rem;
+}

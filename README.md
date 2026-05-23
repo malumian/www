@@ -1,3 +1,3 @@
-# Malumian Portal
+# Malumian
 
 Entry point to Malumian ecosystem.
