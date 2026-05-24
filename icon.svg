@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <style>
-        @media (prefers-color-scheme: dark) {
-            #background {
-                fill: black;
-            }
-            #icon {
-                fill: white;
-            }
-        }
-    </style>
-    <rect id="background" width="512" height="512" fill="white" />
-    <path
-        id="icon"
-        d="M186.625 162H218.75L255.875 286.5L292.875 162H321.25L269.5 344H242.125L186.625 162ZM173.625 162H204.25L209 282V344H173.625V162ZM307.25 162H338V344H302.75V282L307.25 162Z"
-        fill="black"
-    />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><style>@media (prefers-color-scheme:dark){#background{fill:#000}#icon{fill:#fff}}</style><path id="background" fill="#fff" d="M0 0h512v512H0z"/><path id="icon" fill="#000" d="M186.625 162h32.125l37.125 124.5 37-124.5h28.375L269.5 344h-27.375zm-13 0h30.625L209 282v62h-35.375zm133.625 0H338v182h-35.25v-62z"/></svg>
